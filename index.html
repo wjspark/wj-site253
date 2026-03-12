@@ -11,7 +11,9 @@
     googletag.defineSlot('/23334333394/sub', [300, 250], 'div-gpt-ad-1773196177343-0').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
-    googletag.display('div-gpt-ad-1773196177343-0');
+  });
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) { googletag.cmd.push(function() { googletag.pubads().refresh(); }); }
   });
 </script></head>
 <body aria-hidden="false">
