@@ -1,32 +1,243 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html ⚡ lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PlayH5Game</title>
-<link href="style.css" rel="stylesheet"/>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23334333394/sub', [300, 250], 'div-gpt-ad-1773196177343-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-    googletag.display('div-gpt-ad-1773196177343-0');
-  });
-</script>
+<style amp-custom>* {
+    box-sizing: border-box;
+}
+
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    position: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 设置链接之间的间距 */
+    width: 100%; /* 确保容器占据整个宽度 */
+}
+
+main {
+    padding: 5px 20px; /* 确保内容不会被header和footer遮挡 */
+    margin-bottom: 20px;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;  /* 只左右内边距 */
+    box-sizing: border-box;
+    width: 100%;      /* 直接占满父容器 */
+    overflow-x: hidden;
+}
+
+.page-title {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.page-desc {
+    text-align: left;
+    font-size: 14px;
+    color: #00008B;  /* 深灰色 */
+    margin-top: 8px;
+}
+
+.game-list-1 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 每行2个，自动分配宽度 */
+  gap: 10px;  /* 每个游戏项之间的间隙 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-item-1 {
+  background-color: white;
+  border: 1px solid #ccc;  /* 恢复灰色边框 */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;  /* 确保宽度充满容器 */
+  box-sizing: border-box;
+}
+
+.game-item-1 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-item-1 img {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 8px 0;
+  object-fit: contain;
+}
+
+.game-item-1 h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  color: #333;
+  white-space: nowrap;          /* 不换行 */
+  overflow: hidden;             /* 超出隐藏 */
+  text-overflow: ellipsis;      /* 超出显示省略号 */
+  text-align: center;          /* 标题居中 */
+  width: 100%;                  /* 占满父容器宽度 */
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.game-list-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 每行2个，自动分配宽度 */
+  gap: 10px;  /* 每个游戏项之间的间隙 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-item-2 {
+  background-color: white;
+  border: 1px solid #ccc;  /* 恢复灰色边框 */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;  /* 确保宽度充满容器 */
+  box-sizing: border-box;
+}
+
+.game-item-2 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-item-2 img {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 8px 0;
+  object-fit: contain;
+}
+
+.game-stars-2 {
+    font-size: 12px;
+    color: #ff9900;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+/* 每行显示单个游戏项 */
+.game-list-3 {
+  display: grid;
+  grid-template-columns: 1fr;  /* 每行一个游戏项 */
+  gap: 10px;  /* 每个游戏项之间的间隙 */
+  width: 100%;  /* 容器宽度100% */
+  box-sizing: border-box;  /* 包括 padding 和 border */
+}
+
+/* 每个游戏项容器 */
+.game-item-3 {
+  background-color: white;
+  border: 1px solid #ccc;  /* 灰色边框 */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;             /* 使用 flex 布局 */
+  align-items: center;      /* 垂直居中对齐 */
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;             /* 允许子项收缩 */
+}
+
+/* 图标样式 */
+.game-item-3 img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 10px;       /* 图标与标题之间的间距 */
+}
+
+/* 标题样式 */
+.game-item-3 h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  white-space: normal;      /* 允许标题换行 */
+  word-wrap: break-word;    /* 防止标题溢出 */
+  text-align: left;         /* 标题左对齐 */
+  flex-grow: 1;             /* 标题占据剩余的空间 */
+  word-break: break-word;   /* 强制长单词换行 */
+  display: flex;            /* 使用 flex 布局来控制内容对齐 */
+  align-items: center;      /* 垂直居中标题 */
+}
+
+/* 链接样式 */
+.game-item-3 a {
+  display: flex;            /* 使用 flex 布局来并排显示图标和标题 */
+  width: 100%;              /* 确保链接容器占满整个宽度 */
+  text-decoration: none;    /* 移除默认的链接下划线 */
+  color: inherit;           /* 继承父元素的颜色 */
+  align-items: center;      /* 确保图标和标题在链接内垂直居中 */
+}
+
+</style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-img" src="https://cdn.ampproject.org/v0/amp-img-0.1.js"></script>
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
 <body>
 <main class="content">
 <span class="page-title">Online H5 Free GameBox</span>
 <p class="page-desc">The Hot Games</p>
-<div class="game-list-1" id="top-games" style="margin-bottom: 20px;"><div class="game-item-1"><a href="detail/MarketSort.html"><img loading="lazy" src="images/MarketSort.webp"/><h2>MarketSort</h2></a></div><div class="game-item-1"><a href="detail/knife-hit.html"><img loading="lazy" src="images/knife-hit.webp"/><h2>knife-hit</h2></a></div></div>
-<div id='div-gpt-ad-1773196177343-0' style='min-width: 200px; min-height: 200px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1773196177343-0'); });
-  </script>
-</div>
+<div class="game-list-1" id="top-games" style="margin-bottom: 20px;"><div class="game-item-1"><a href="detail/MarketSort.html"><amp-img src="images/MarketSort.webp" width="150" height="150" layout="responsive"></amp-img><h2>MarketSort</h2></a></div><div class="game-item-1"><a href="detail/knife-hit.html"><amp-img src="images/knife-hit.webp" width="150" height="150" layout="responsive"></amp-img><h2>knife-hit</h2></a></div></div>
+<amp-ad width="300" height="250" type="doubleclick" data-slot="/23334333394/sub"></amp-ad>
 <p class="page-desc">Explore More Games</p>
-<div class="game-list-1" id="new-games" style="margin-bottom: 20px;"><div class="game-item-1"><a href="detail/Monster-duo.html"><img loading="lazy" src="images/Monster-duo.webp"/><h2>Monster-duo</h2></a></div><div class="game-item-1"><a href="detail/dd-pick-it.html"><img loading="lazy" src="images/dd-pick-it.webp"/><h2>dd-pick-it</h2></a></div><div class="game-item-1"><a href="detail/subway-surfers_san-francisco.html"><img loading="lazy" src="images/subway-surfers_san-francisco.webp"/><h2>subway-surfers_san-francisco</h2></a></div><div class="game-item-1"><a href="detail/blockup-puzzle.html"><img loading="lazy" src="images/blockup-puzzle.webp"/><h2>blockup-puzzle</h2></a></div><div class="game-item-1"><a href="detail/quiz-star.html"><img loading="lazy" src="images/quiz-star.webp"/><h2>quiz-star</h2></a></div><div class="game-item-1"><a href="detail/tetra-blocks.html"><img loading="lazy" src="images/tetra-blocks.webp"/><h2>tetra-blocks</h2></a></div><div class="game-item-1"><a href="detail/Perfect_Piano_2.html"><img loading="lazy" src="images/Perfect_Piano_2.webp"/><h2>Perfect_Piano_2</h2></a></div><div class="game-item-1"><a href="detail/memory-match.html"><img loading="lazy" src="images/memory-match.webp"/><h2>memory-match</h2></a></div><div class="game-item-1"><a href="detail/motox3m1.html"><img loading="lazy" src="images/motox3m1.webp"/><h2>motox3m1</h2></a></div><div class="game-item-1"><a href="detail/towerDefense.html"><img loading="lazy" src="images/towerDefense.webp"/><h2>towerDefense</h2></a></div><div class="game-item-1"><a href="detail/american-football-challenge.html"><img loading="lazy" src="images/american-football-challenge.webp"/><h2>american-football-challenge</h2></a></div><div class="game-item-1"><a href="detail/motox3m3.html"><img loading="lazy" src="images/motox3m3.webp"/><h2>motox3m3</h2></a></div><div class="game-item-1"><a href="detail/Parking_Slot.html"><img loading="lazy" src="images/Parking_Slot.webp"/><h2>Parking_Slot</h2></a></div><div class="game-item-1"><a href="detail/traffic-tap-puzzle.html"><img loading="lazy" src="images/traffic-tap-puzzle.webp"/><h2>traffic-tap-puzzle</h2></a></div><div class="game-item-1"><a href="detail/BallSortPuzzle.html"><img loading="lazy" src="images/BallSortPuzzle.webp"/><h2>BallSortPuzzle</h2></a></div><div class="game-item-1"><a href="detail/mini-golf.html"><img loading="lazy" src="images/mini-golf.webp"/><h2>mini-golf</h2></a></div><div class="game-item-1"><a href="detail/Basketball_REAL.html"><img loading="lazy" src="images/Basketball_REAL.webp"/><h2>Basketball_REAL</h2></a></div><div class="game-item-1"><a href="detail/Amazing-bubble-breaker.html"><img loading="lazy" src="images/Amazing-bubble-breaker.webp"/><h2>Amazing-bubble-breaker</h2></a></div><div class="game-item-1"><a href="detail/Hexagon_Block_Sort.html"><img loading="lazy" src="images/Hexagon_Block_Sort.webp"/><h2>Hexagon_Block_Sort</h2></a></div><div class="game-item-1"><a href="detail/BlobOpera.html"><img loading="lazy" src="images/BlobOpera.webp"/><h2>BlobOpera</h2></a></div><div class="game-item-1"><a href="detail/fours.html"><img loading="lazy" src="images/fours.webp"/><h2>fours</h2></a></div><div class="game-item-1"><a href="detail/connect-merge.html"><img loading="lazy" src="images/connect-merge.webp"/><h2>connect-merge</h2></a></div><div class="game-item-1"><a href="detail/ruin.html"><img loading="lazy" src="images/ruin.webp"/><h2>ruin</h2></a></div><div class="game-item-1"><a href="detail/Music_Surf_Christmas.html"><img loading="lazy" src="images/Music_Surf_Christmas.webp"/><h2>Music_Surf_Christmas</h2></a></div><div class="game-item-1"><a href="detail/blastify2.html"><img loading="lazy" src="images/blastify2.webp"/><h2>blastify2</h2></a></div><div class="game-item-1"><a href="detail/swipe-cubes.html"><img loading="lazy" src="images/swipe-cubes.webp"/><h2>swipe-cubes</h2></a></div><div class="game-item-1"><a href="detail/mahjong-classic.html"><img loading="lazy" src="images/mahjong-classic.webp"/><h2>mahjong-classic</h2></a></div><div class="game-item-1"><a href="detail/PowerPopBlast.html"><img loading="lazy" src="images/PowerPopBlast.webp"/><h2>PowerPopBlast</h2></a></div><div class="game-item-1"><a href="detail/blend-fruits.html"><img loading="lazy" src="images/blend-fruits.webp"/><h2>blend-fruits</h2></a></div><div class="game-item-1"><a href="detail/motox3m5.html"><img loading="lazy" src="images/motox3m5.webp"/><h2>motox3m5</h2></a></div><div class="game-item-1"><a href="detail/Christmas_Connect.html"><img loading="lazy" src="images/Christmas_Connect.webp"/><h2>Christmas_Connect</h2></a></div><div class="game-item-1"><a href="detail/fruitmas.html"><img loading="lazy" src="images/fruitmas.webp"/><h2>fruitmas</h2></a></div><div class="game-item-1"><a href="detail/dd-knots.html"><img loading="lazy" src="images/dd-knots.webp"/><h2>dd-knots</h2></a></div><div class="game-item-1"><a href="detail/onet-world.html"><img loading="lazy" src="images/onet-world.webp"/><h2>onet-world</h2></a></div><div class="game-item-1"><a href="detail/Galaxy_Attack.html"><img loading="lazy" src="images/Galaxy_Attack.webp"/><h2>Galaxy_Attack</h2></a></div><div class="game-item-1"><a href="detail/Music_Line_3D.html"><img loading="lazy" src="images/Music_Line_3D.webp"/><h2>Music_Line_3D</h2></a></div><div class="game-item-1"><a href="detail/candyCrush.html"><img loading="lazy" src="images/candyCrush.webp"/><h2>candyCrush</h2></a></div><div class="game-item-1"><a href="detail/DrawIn.html"><img loading="lazy" src="images/DrawIn.webp"/><h2>DrawIn</h2></a></div><div class="game-item-1"><a href="detail/equalz.html"><img loading="lazy" src="images/equalz.webp"/><h2>equalz</h2></a></div><div class="game-item-1"><a href="detail/scooer_hero.html"><img loading="lazy" src="images/scooer_hero.webp"/><h2>scooer_hero</h2></a></div><div class="game-item-1"><a href="detail/parkmania.html"><img loading="lazy" src="images/parkmania.webp"/><h2>parkmania</h2></a></div><div class="game-item-1"><a href="detail/dd-sand-sort-puzzle.html"><img loading="lazy" src="images/dd-sand-sort-puzzle.webp"/><h2>dd-sand-sort-puzzle</h2></a></div><div class="game-item-1"><a href="detail/wooden-slide.html"><img loading="lazy" src="images/wooden-slide.webp"/><h2>wooden-slide</h2></a></div><div class="game-item-1"><a href="detail/parking-way.html"><img loading="lazy" src="images/parking-way.webp"/><h2>parking-way</h2></a></div><div class="game-item-1"><a href="detail/sporos.html"><img loading="lazy" src="images/sporos.webp"/><h2>sporos</h2></a></div><div class="game-item-1"><a href="detail/awaken-the-ocean.html"><img loading="lazy" src="images/awaken-the-ocean.webp"/><h2>awaken-the-ocean</h2></a></div><div class="game-item-1"><a href="detail/tap-tap-dunk.html"><img loading="lazy" src="images/tap-tap-dunk.webp"/><h2>tap-tap-dunk</h2></a></div><div class="game-item-1"><a href="detail/Spot-the-differences.html"><img loading="lazy" src="images/Spot-the-differences.webp"/><h2>Spot-the-differences</h2></a></div><div class="game-item-1"><a href="detail/merge-face.html"><img loading="lazy" src="images/merge-face.webp"/><h2>merge-face</h2></a></div><div class="game-item-1"><a href="detail/Differences_Find.html"><img loading="lazy" src="images/Differences_Find.webp"/><h2>Differences_Find</h2></a></div><div class="game-item-1"><a href="detail/words-of-wonders.html"><img loading="lazy" src="images/words-of-wonders.webp"/><h2>words-of-wonders</h2></a></div><div class="game-item-1"><a href="detail/space-monsters.html"><img loading="lazy" src="images/space-monsters.webp"/><h2>space-monsters</h2></a></div><div class="game-item-1"><a href="detail/Onet_Link.html"><img loading="lazy" src="images/Onet_Link.webp"/><h2>Onet_Link</h2></a></div><div class="game-item-1"><a href="detail/filling-lines.html"><img loading="lazy" src="images/filling-lines.webp"/><h2>filling-lines</h2></a></div><div class="game-item-1"><a href="detail/emoji-flow.html"><img loading="lazy" src="images/emoji-flow.webp"/><h2>emoji-flow</h2></a></div><div class="game-item-1"><a href="detail/ParkingOut.html"><img loading="lazy" src="images/ParkingOut.webp"/><h2>ParkingOut</h2></a></div><div class="game-item-1"><a href="detail/house-paint.html"><img loading="lazy" src="images/house-paint.webp"/><h2>house-paint</h2></a></div><div class="game-item-1"><a href="detail/CocktailSort.html"><img loading="lazy" src="images/CocktailSort.webp"/><h2>CocktailSort</h2></a></div><div class="game-item-1"><a href="detail/CubeJump.html"><img loading="lazy" src="images/CubeJump.webp"/><h2>CubeJump</h2></a></div><div class="game-item-1"><a href="detail/number-maze.html"><img loading="lazy" src="images/number-maze.webp"/><h2>number-maze</h2></a></div></div>
+<div class="game-list-1" id="new-games" style="margin-bottom: 20px;"><div class="game-item-1"><a href="detail/Monster-duo.html"><amp-img src="images/Monster-duo.webp" width="150" height="150" layout="responsive"></amp-img><h2>Monster-duo</h2></a></div><div class="game-item-1"><a href="detail/dd-pick-it.html"><amp-img src="images/dd-pick-it.webp" width="150" height="150" layout="responsive"></amp-img><h2>dd-pick-it</h2></a></div><div class="game-item-1"><a href="detail/subway-surfers_san-francisco.html"><amp-img src="images/subway-surfers_san-francisco.webp" width="150" height="150" layout="responsive"></amp-img><h2>subway-surfers_san-francisco</h2></a></div><div class="game-item-1"><a href="detail/blockup-puzzle.html"><amp-img src="images/blockup-puzzle.webp" width="150" height="150" layout="responsive"></amp-img><h2>blockup-puzzle</h2></a></div><div class="game-item-1"><a href="detail/quiz-star.html"><amp-img src="images/quiz-star.webp" width="150" height="150" layout="responsive"></amp-img><h2>quiz-star</h2></a></div><div class="game-item-1"><a href="detail/tetra-blocks.html"><amp-img src="images/tetra-blocks.webp" width="150" height="150" layout="responsive"></amp-img><h2>tetra-blocks</h2></a></div><div class="game-item-1"><a href="detail/Perfect_Piano_2.html"><amp-img src="images/Perfect_Piano_2.webp" width="150" height="150" layout="responsive"></amp-img><h2>Perfect_Piano_2</h2></a></div><div class="game-item-1"><a href="detail/memory-match.html"><amp-img src="images/memory-match.webp" width="150" height="150" layout="responsive"></amp-img><h2>memory-match</h2></a></div><div class="game-item-1"><a href="detail/motox3m1.html"><amp-img src="images/motox3m1.webp" width="150" height="150" layout="responsive"></amp-img><h2>motox3m1</h2></a></div><div class="game-item-1"><a href="detail/towerDefense.html"><amp-img src="images/towerDefense.webp" width="150" height="150" layout="responsive"></amp-img><h2>towerDefense</h2></a></div><div class="game-item-1"><a href="detail/american-football-challenge.html"><amp-img src="images/american-football-challenge.webp" width="150" height="150" layout="responsive"></amp-img><h2>american-football-challenge</h2></a></div><div class="game-item-1"><a href="detail/motox3m3.html"><amp-img src="images/motox3m3.webp" width="150" height="150" layout="responsive"></amp-img><h2>motox3m3</h2></a></div><div class="game-item-1"><a href="detail/Parking_Slot.html"><amp-img src="images/Parking_Slot.webp" width="150" height="150" layout="responsive"></amp-img><h2>Parking_Slot</h2></a></div><div class="game-item-1"><a href="detail/traffic-tap-puzzle.html"><amp-img src="images/traffic-tap-puzzle.webp" width="150" height="150" layout="responsive"></amp-img><h2>traffic-tap-puzzle</h2></a></div><div class="game-item-1"><a href="detail/BallSortPuzzle.html"><amp-img src="images/BallSortPuzzle.webp" width="150" height="150" layout="responsive"></amp-img><h2>BallSortPuzzle</h2></a></div><div class="game-item-1"><a href="detail/mini-golf.html"><amp-img src="images/mini-golf.webp" width="150" height="150" layout="responsive"></amp-img><h2>mini-golf</h2></a></div><div class="game-item-1"><a href="detail/Basketball_REAL.html"><amp-img src="images/Basketball_REAL.webp" width="150" height="150" layout="responsive"></amp-img><h2>Basketball_REAL</h2></a></div><div class="game-item-1"><a href="detail/Amazing-bubble-breaker.html"><amp-img src="images/Amazing-bubble-breaker.webp" width="150" height="150" layout="responsive"></amp-img><h2>Amazing-bubble-breaker</h2></a></div><div class="game-item-1"><a href="detail/Hexagon_Block_Sort.html"><amp-img src="images/Hexagon_Block_Sort.webp" width="150" height="150" layout="responsive"></amp-img><h2>Hexagon_Block_Sort</h2></a></div><div class="game-item-1"><a href="detail/BlobOpera.html"><amp-img src="images/BlobOpera.webp" width="150" height="150" layout="responsive"></amp-img><h2>BlobOpera</h2></a></div><div class="game-item-1"><a href="detail/fours.html"><amp-img src="images/fours.webp" width="150" height="150" layout="responsive"></amp-img><h2>fours</h2></a></div><div class="game-item-1"><a href="detail/connect-merge.html"><amp-img src="images/connect-merge.webp" width="150" height="150" layout="responsive"></amp-img><h2>connect-merge</h2></a></div><div class="game-item-1"><a href="detail/ruin.html"><amp-img src="images/ruin.webp" width="150" height="150" layout="responsive"></amp-img><h2>ruin</h2></a></div><div class="game-item-1"><a href="detail/Music_Surf_Christmas.html"><amp-img src="images/Music_Surf_Christmas.webp" width="150" height="150" layout="responsive"></amp-img><h2>Music_Surf_Christmas</h2></a></div><div class="game-item-1"><a href="detail/blastify2.html"><amp-img src="images/blastify2.webp" width="150" height="150" layout="responsive"></amp-img><h2>blastify2</h2></a></div><div class="game-item-1"><a href="detail/swipe-cubes.html"><amp-img src="images/swipe-cubes.webp" width="150" height="150" layout="responsive"></amp-img><h2>swipe-cubes</h2></a></div><div class="game-item-1"><a href="detail/mahjong-classic.html"><amp-img src="images/mahjong-classic.webp" width="150" height="150" layout="responsive"></amp-img><h2>mahjong-classic</h2></a></div><div class="game-item-1"><a href="detail/PowerPopBlast.html"><amp-img src="images/PowerPopBlast.webp" width="150" height="150" layout="responsive"></amp-img><h2>PowerPopBlast</h2></a></div><div class="game-item-1"><a href="detail/blend-fruits.html"><amp-img src="images/blend-fruits.webp" width="150" height="150" layout="responsive"></amp-img><h2>blend-fruits</h2></a></div><div class="game-item-1"><a href="detail/motox3m5.html"><amp-img src="images/motox3m5.webp" width="150" height="150" layout="responsive"></amp-img><h2>motox3m5</h2></a></div><div class="game-item-1"><a href="detail/Christmas_Connect.html"><amp-img src="images/Christmas_Connect.webp" width="150" height="150" layout="responsive"></amp-img><h2>Christmas_Connect</h2></a></div><div class="game-item-1"><a href="detail/fruitmas.html"><amp-img src="images/fruitmas.webp" width="150" height="150" layout="responsive"></amp-img><h2>fruitmas</h2></a></div><div class="game-item-1"><a href="detail/dd-knots.html"><amp-img src="images/dd-knots.webp" width="150" height="150" layout="responsive"></amp-img><h2>dd-knots</h2></a></div><div class="game-item-1"><a href="detail/onet-world.html"><amp-img src="images/onet-world.webp" width="150" height="150" layout="responsive"></amp-img><h2>onet-world</h2></a></div><div class="game-item-1"><a href="detail/Galaxy_Attack.html"><amp-img src="images/Galaxy_Attack.webp" width="150" height="150" layout="responsive"></amp-img><h2>Galaxy_Attack</h2></a></div><div class="game-item-1"><a href="detail/Music_Line_3D.html"><amp-img src="images/Music_Line_3D.webp" width="150" height="150" layout="responsive"></amp-img><h2>Music_Line_3D</h2></a></div><div class="game-item-1"><a href="detail/candyCrush.html"><amp-img src="images/candyCrush.webp" width="150" height="150" layout="responsive"></amp-img><h2>candyCrush</h2></a></div><div class="game-item-1"><a href="detail/DrawIn.html"><amp-img src="images/DrawIn.webp" width="150" height="150" layout="responsive"></amp-img><h2>DrawIn</h2></a></div><div class="game-item-1"><a href="detail/equalz.html"><amp-img src="images/equalz.webp" width="150" height="150" layout="responsive"></amp-img><h2>equalz</h2></a></div><div class="game-item-1"><a href="detail/scooer_hero.html"><amp-img src="images/scooer_hero.webp" width="150" height="150" layout="responsive"></amp-img><h2>scooer_hero</h2></a></div><div class="game-item-1"><a href="detail/parkmania.html"><amp-img src="images/parkmania.webp" width="150" height="150" layout="responsive"></amp-img><h2>parkmania</h2></a></div><div class="game-item-1"><a href="detail/dd-sand-sort-puzzle.html"><amp-img src="images/dd-sand-sort-puzzle.webp" width="150" height="150" layout="responsive"></amp-img><h2>dd-sand-sort-puzzle</h2></a></div><div class="game-item-1"><a href="detail/wooden-slide.html"><amp-img src="images/wooden-slide.webp" width="150" height="150" layout="responsive"></amp-img><h2>wooden-slide</h2></a></div><div class="game-item-1"><a href="detail/parking-way.html"><amp-img src="images/parking-way.webp" width="150" height="150" layout="responsive"></amp-img><h2>parking-way</h2></a></div><div class="game-item-1"><a href="detail/sporos.html"><amp-img src="images/sporos.webp" width="150" height="150" layout="responsive"></amp-img><h2>sporos</h2></a></div><div class="game-item-1"><a href="detail/awaken-the-ocean.html"><amp-img src="images/awaken-the-ocean.webp" width="150" height="150" layout="responsive"></amp-img><h2>awaken-the-ocean</h2></a></div><div class="game-item-1"><a href="detail/tap-tap-dunk.html"><amp-img src="images/tap-tap-dunk.webp" width="150" height="150" layout="responsive"></amp-img><h2>tap-tap-dunk</h2></a></div><div class="game-item-1"><a href="detail/Spot-the-differences.html"><amp-img src="images/Spot-the-differences.webp" width="150" height="150" layout="responsive"></amp-img><h2>Spot-the-differences</h2></a></div><div class="game-item-1"><a href="detail/merge-face.html"><amp-img src="images/merge-face.webp" width="150" height="150" layout="responsive"></amp-img><h2>merge-face</h2></a></div><div class="game-item-1"><a href="detail/Differences_Find.html"><amp-img src="images/Differences_Find.webp" width="150" height="150" layout="responsive"></amp-img><h2>Differences_Find</h2></a></div><div class="game-item-1"><a href="detail/words-of-wonders.html"><amp-img src="images/words-of-wonders.webp" width="150" height="150" layout="responsive"></amp-img><h2>words-of-wonders</h2></a></div><div class="game-item-1"><a href="detail/space-monsters.html"><amp-img src="images/space-monsters.webp" width="150" height="150" layout="responsive"></amp-img><h2>space-monsters</h2></a></div><div class="game-item-1"><a href="detail/Onet_Link.html"><amp-img src="images/Onet_Link.webp" width="150" height="150" layout="responsive"></amp-img><h2>Onet_Link</h2></a></div><div class="game-item-1"><a href="detail/filling-lines.html"><amp-img src="images/filling-lines.webp" width="150" height="150" layout="responsive"></amp-img><h2>filling-lines</h2></a></div><div class="game-item-1"><a href="detail/emoji-flow.html"><amp-img src="images/emoji-flow.webp" width="150" height="150" layout="responsive"></amp-img><h2>emoji-flow</h2></a></div><div class="game-item-1"><a href="detail/ParkingOut.html"><amp-img src="images/ParkingOut.webp" width="150" height="150" layout="responsive"></amp-img><h2>ParkingOut</h2></a></div><div class="game-item-1"><a href="detail/house-paint.html"><amp-img src="images/house-paint.webp" width="150" height="150" layout="responsive"></amp-img><h2>house-paint</h2></a></div><div class="game-item-1"><a href="detail/CocktailSort.html"><amp-img src="images/CocktailSort.webp" width="150" height="150" layout="responsive"></amp-img><h2>CocktailSort</h2></a></div><div class="game-item-1"><a href="detail/CubeJump.html"><amp-img src="images/CubeJump.webp" width="150" height="150" layout="responsive"></amp-img><h2>CubeJump</h2></a></div><div class="game-item-1"><a href="detail/number-maze.html"><amp-img src="images/number-maze.webp" width="150" height="150" layout="responsive"></amp-img><h2>number-maze</h2></a></div></div>
 </main>
 <footer>
 <div class="container">
