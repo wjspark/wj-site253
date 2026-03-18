@@ -264,8 +264,9 @@ body {
     if (playButton) {
       playButton.addEventListener('click', function(e) {
         e.preventDefault();
+        const topSection = document.querySelector('.top-section');
         playSection.style.display = 'block';
-        playButton.style.display = 'none';
+        if (topSection) topSection.style.display = 'none';
       });
     }
   });
