@@ -10,6 +10,15 @@
   window.googletag = window.googletag || {cmd: []};
   googletag.cmd.push(function() {
     googletag.defineSlot('/23334333394/sub2', [[200, 200], [480, 320], [300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1773811645613-0').addService(googletag.pubads());
+    // ad of inserting screen
+    var interstitialSlot = googletag.defineOutOfPageSlot(
+      '/23334333394/sub3',
+      googletag.enums.OutOfPageFormat.INTERSTITIAL
+    );
+    if (interstitialSlot) {
+      interstitialSlot.addService(googletag.pubads());
+    }
+
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
